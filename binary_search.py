@@ -1,13 +1,13 @@
 from typing import List, Optional
 
 
-def binary_search(arr: List[int], item: int) -> Optional[int]:
+def binary_search(sorted_arr: List[int], item: int) -> Optional[int]:
     low = 0
-    high = len(arr) - 1
+    high = len(sorted_arr) - 1
 
     while low <= high:
         mid = (low + high) // 2
-        guess = arr[mid]
+        guess = sorted_arr[mid]
         if guess == item:
             return mid
         elif guess > item:
