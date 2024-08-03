@@ -13,8 +13,3 @@ def binary_search(sorted_arr: list[int], item: int) -> int | None:
             low = mid + 1
 
     return None
-
-
-if __name__ == "__main__":
-    my_list: list[int] = [1, 3, 5, 7, 9]
-    print(binary_search(my_list, 7))
