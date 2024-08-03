@@ -1,7 +1,4 @@
-from typing import List, Optional
-
-
-def binary_search(sorted_arr: List[int], item: int) -> Optional[int]:
+def binary_search(sorted_arr: list[int], item: int) -> int | None:
     low = 0
     high = len(sorted_arr) - 1
 
@@ -19,5 +16,5 @@ def binary_search(sorted_arr: List[int], item: int) -> Optional[int]:
 
 
 if __name__ == "__main__":
-    my_list: List[int] = [1, 3, 5, 7, 9]
+    my_list: list[int] = [1, 3, 5, 7, 9]
     print(binary_search(my_list, 7))

@@ -1,5 +1,6 @@
 import pytest
-from binary_search import binary_search
+
+from src.binary_search import binary_search
 
 
 @pytest.mark.parametrize(
@@ -17,6 +18,8 @@ from binary_search import binary_search
         ([2, 4, 6, 8, 10], 5, None),
     ],
 )
-def test_binary_search(sorted_list, target, expected_output):
+def test_binary_search(
+    sorted_list: list[int], target: int, expected_output: int | None
+):
     output = binary_search(sorted_list, target)
     assert output == expected_output
