@@ -12,11 +12,15 @@ def breadth_first_search(graph: dict[str, list[str]]) -> bool:
     # Add the first degree neighbor
     search_queue += graph["you"]
 
+    # keep track of the person who is searched, so we don't run into duplicate
+    searched: set[str] = set()
     while search_queue:
         person = search_queue.popleft()
-        if person_is_seller(person):
-            print(f"{person} is the a mango seller")
-            return True
-        else:
-            search_queue += graph[person]
+        if person not in searched:
+            if person_is_seller(person):
+                print(f"{person} is the a mango seller")
+                return True
+            else:
+                search_queue += graph[person]
+                searched.add(person)
     return False
