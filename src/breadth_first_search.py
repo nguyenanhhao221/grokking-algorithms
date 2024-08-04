@@ -2,7 +2,6 @@ from collections import deque
 
 
 def person_is_seller(name: str) -> bool:
-    print("foo")
     return name[-1] == "m"
 
 
