@@ -2,22 +2,20 @@
 name = "grokking-algorithms"
 version = "0.1.0"
 description = "Default template for PDM package"
-authors = [
-    {name = "Hao Nguyen", email = "hao@haonguyen.tech"},
-]
-dependencies = [
-    "pytest>=8.3.2",
-    "ruff>=0.5.6",
-]
+authors = [{ name = "Hao Nguyen", email = "hao@haonguyen.tech" }]
+dependencies = ["pytest>=8.3.2"]
 requires-python = "==3.12.*"
 readme = "README.md"
-license = {text = "MIT"}
-
+license = { text = "MIT" }
 
 [tool.pdm]
 distribution = false
 
+[tool.pdm.dev-dependencies]
+dev = ["isort>=5.13.2", "ruff>=0.5.6"]
+
 [tool.ruff]
-ignore = [
-    "F841",
-]
+ignore = ["F841"]
+
+[tool.basedpyright]
+reportUnusedImport = false
