@@ -14,8 +14,7 @@ distribution = false
 [tool.pdm.dev-dependencies]
 dev = ["isort>=5.13.2", "ruff>=0.5.6"]
 
-[tool.ruff]
-ignore = ["F841"]
-
 [tool.basedpyright]
+# this will handle in ruff
 reportUnusedImport = false
+reportUnusedVariable = false
