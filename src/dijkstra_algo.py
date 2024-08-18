@@ -82,7 +82,3 @@ def print_path_with_lowest_cost(parents: dict[str, str | None]):
         value = parents.get(value)
 
     print(" -> ".join(result))
-
-
-if __name__ == "__main__":
-    dijkstra_algo()
