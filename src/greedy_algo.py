@@ -11,14 +11,14 @@ def greedy_algo() -> set[str]:
     final_stations: set[str] = set()
 
     while states_needed:
-        best_station = None
-        states_coverered: set[str] = set()
-        for station, states_for_station in stations.items():
-            covered = states_needed & states_for_station
-            if len(covered) > len(states_coverered):
+        best_station: str | None = None
+        states_covered: set[str] = set()
+        for station, states_cover_by_station in stations.items():
+            covered = states_needed & states_cover_by_station
+            if len(covered) > len(states_covered):
                 best_station = station
-                states_coverered = covered
-        states_needed -= states_coverered
+                states_covered = covered
+        states_needed -= states_covered
 
         if best_station is not None:
             final_stations.add(best_station)
